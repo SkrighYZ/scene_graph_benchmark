@@ -30,9 +30,9 @@ INPUT:
 DATASETS:
 #    FACTORY_TEST: ("ODTSVDataset",)
 #    TEST: ("flickr30k/tsv/flickr30k.yaml",)
-    LABELMAP_FILE: "visualgenome/VG-SGG-dicts-vgoi6-clipped.json"
-    TRAIN: ("visualgenome/train_vgoi6_clipped.yaml",)
-    TEST: ("visualgenome/test_vgoi6_clipped.yaml",)
+    LABELMAP_FILE: "../flickr30k/VG-SGG-dicts-vgoi6-clipped.json"
+    TRAIN: ("../flickr30k/visualgenome/train_vgoi6_clipped.yaml",)
+    TEST: ("../flickr30k/visualgenome/test_vgoi6_clipped.yaml",)
     FACTORY_TRAIN: ("VGTSVDataset",)
     FACTORY_TEST: ("VGTSVDataset",)
 DATALOADER:
