@@ -166,6 +166,7 @@ def convert_predictions_to_tsv(predictions, dataset, output_folder,
                     if name == 'class':
                         print(labels)
                         print(labels[i])
+                        print(labelmap)
                         cur_d['class'] = labelmap[labels[i]]
                     if name == 'conf':
                         cur_d['conf'] = scores[i]
