@@ -4,6 +4,7 @@ import os.path as op
 import json
 import cv2
 import base64
+from tqdm import tqdm
 
 from maskrcnn_benchmark.structures.tsv_file_ops import tsv_reader, tsv_writer
 from maskrcnn_benchmark.structures.tsv_file_ops import generate_linelist_file
@@ -22,7 +23,7 @@ hw_file = "../flickr30k/hw.tsv"
 rows = []
 #rows_label = []
 rows_hw = []
-for img_p in img_list:
+for img_p in tqdm(img_list):
     img_key = img_p.split('.')[0]
     img_path = op.join(data_path, img_p)
     img = cv2.imread(img_path)
