@@ -67,6 +67,7 @@ def _accumulate_predictions_from_multiple_gpus(predictions_per_gpu, gather_on_cp
         predictions.update(p)
     # convert a dict where the key is the index in a list
     image_ids = list(sorted(predictions.keys()))
+    print(image_ids)
     if len(image_ids) != image_ids[-1] + 1:
         logger = logging.getLogger("maskrcnn_benchmark.inference")
         logger.warning(
