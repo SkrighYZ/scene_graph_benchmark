@@ -30,7 +30,7 @@ INPUT:
 DATASETS:
 #    FACTORY_TEST: ("ODTSVDataset",)
 #    TEST: ("flickr30k/tsv/flickr30k.yaml",)
-    LABELMAP_FILE: "VG-SGG-dicts-danfeiX-clipped.json"
+    LABELMAP_FILE: "VG-SGG-dicts-vgoi6-clipped.json"
     TRAIN: ("test_vgoi_clipped.yaml",)
     TEST: ("test_vgoi_clipped.yaml",)
     FACTORY_TRAIN: ("VGTSVDataset",)
