@@ -17,7 +17,7 @@ from maskrcnn_benchmark.data.datasets.utils.image_ops import img_from_base64
 data_path = sys.argv[1]
 img_list = os.listdir(data_path)
 tsv_file = "../flickr30k/img.tsv"
-label_file = "../flickr30k/data/label.tsv"
+label_file = "../flickr30k/label.tsv"
 hw_file = "../flickr30k/hw.tsv"
 linelist_file = "../flickr30k/linelist.tsv"
 
