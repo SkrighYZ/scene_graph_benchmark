@@ -31,8 +31,8 @@ DATASETS:
 #    FACTORY_TEST: ("ODTSVDataset",)
 #    TEST: ("flickr30k/tsv/flickr30k.yaml",)
     LABELMAP_FILE: "VG-SGG-dicts-danfeiX-clipped.json"
-    TRAIN: ("../flickr30k/train_vgoi_clipped.yaml",)
-    TEST: ("../flickr30k/test_vgoi_clipped.yaml",)
+    TRAIN: ("train_vgoi_clipped.yaml",)
+    TEST: ("test_vgoi_clipped.yaml",)
     FACTORY_TRAIN: ("VGTSVDataset",)
     FACTORY_TEST: ("VGTSVDataset",)
 DATALOADER:
