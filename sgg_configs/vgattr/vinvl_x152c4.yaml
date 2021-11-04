@@ -1,6 +1,6 @@
 MODEL:
     META_ARCHITECTURE: "AttrRCNN"
-    WEIGHT: "pretrained_model/gqa/gqa_X152C4_vrdvgvrd_lr0.003_bsz8_objscore005_nooverlap/model_0080000.pth"
+    WEIGHT: "../models/vinvl_vg_x152c4.pth"
     BACKBONE:
       CONV_BODY: "R-152-C4"
     RESNETS:
@@ -51,6 +51,7 @@ TEST:
     SAVE_RESULTS_TO_TSV: True
     TSV_SAVE_SUBSET: ['rect', 'class', 'conf', 'feature']
     GATHER_ON_CPU: True
-OUTPUT_DIR: "./output/X152C5_test"
-DATA_DIR: "./datasets"
+    OUTPUT_FEATURE: True
+OUTPUT_DIR: "./output/X152C5"
+DATA_DIR: "../flickr30k"
 DISTRIBUTED_BACKEND: 'gloo'
