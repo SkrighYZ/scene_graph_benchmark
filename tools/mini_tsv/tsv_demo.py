@@ -5,6 +5,7 @@ import json
 import cv2
 import base64
 from tqdm import tqdm
+import sys
 
 from maskrcnn_benchmark.structures.tsv_file_ops import tsv_reader, tsv_writer
 from maskrcnn_benchmark.structures.tsv_file_ops import generate_linelist_file
@@ -13,7 +14,7 @@ from maskrcnn_benchmark.structures.tsv_file import TSVFile
 from maskrcnn_benchmark.data.datasets.utils.image_ops import img_from_base64
 
 # To generate a tsv file:
-data_path = "../../flickr30k_images/"
+data_path = sys.argv[1]
 img_list = os.listdir(data_path)
 tsv_file = "../flickr30k/img.tsv"
 #label_file = "tools/mini_tsv/data/train.label.tsv"
