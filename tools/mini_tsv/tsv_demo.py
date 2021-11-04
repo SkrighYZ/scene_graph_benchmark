@@ -12,7 +12,7 @@ from maskrcnn_benchmark.structures.tsv_file import TSVFile
 from maskrcnn_benchmark.data.datasets.utils.image_ops import img_from_base64
 
 # To generate a tsv file:
-data_path = "~/flickr30k_images/"
+data_path = "../../flickr30k_images/"
 img_list = os.listdir(data_path)
 tsv_file = "../flickr30k/img.tsv"
 #label_file = "tools/mini_tsv/data/train.label.tsv"
