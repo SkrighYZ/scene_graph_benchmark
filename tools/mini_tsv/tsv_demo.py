@@ -22,7 +22,7 @@ hw_file = "../flickr30k/hw.tsv"
 linelist_file = "../flickr30k/linelist.tsv"
 
 rows = []
-#rows_label = []
+rows_label = []
 rows_hw = []
 for img_p in tqdm(img_list):
     img_key = img_p.split('.')[0]
