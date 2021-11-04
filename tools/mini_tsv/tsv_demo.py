@@ -17,9 +17,9 @@ from maskrcnn_benchmark.data.datasets.utils.image_ops import img_from_base64
 data_path = sys.argv[1]
 img_list = os.listdir(data_path)
 tsv_file = "../flickr30k/img.tsv"
-#label_file = "tools/mini_tsv/data/train.label.tsv"
+label_file = "tools/mini_tsv/data/label.tsv"
 hw_file = "../flickr30k/hw.tsv"
-#linelist_file = "../flickr30k/linelist.tsv"
+linelist_file = "../flickr30k/linelist.tsv"
 
 rows = []
 #rows_label = []
@@ -35,15 +35,15 @@ for img_p in tqdm(img_list):
     # # given by each dataset. The label is a list of dictionary 
     # # where each box with at least "rect" (xyxy mode) and "class"
     # # fields. It can have any other fields given by the dataset.
-    # labels = []
-    # labels.append({"rect": [1, 1, 30, 40], "class": "Dog"})
-    # labels.append({"rect": [2, 3, 100, 100], "class": "Cat"})
+    labels = []
+    labels.append({"rect": [1, 1, 30, 40], "class": "Dog"})
+    labels.append({"rect": [2, 3, 100, 100], "class": "Cat"})
 
     row = [img_key, img_encoded_str]
     rows.append(row)
 
-    # row_label = [img_key, json.dumps(labels)]
-    # rows_label.append(row_label)
+    row_label = [img_key, json.dumps(labels)]
+    rows_label.append(row_label)
 
     height = img.shape[0]
     width = img.shape[1]
@@ -51,11 +51,11 @@ for img_p in tqdm(img_list):
     rows_hw.append(row_hw)
 
 tsv_writer(rows, tsv_file)
-#tsv_writer(rows_label, label_file)
+tsv_writer(rows_label, label_file)
 tsv_writer(rows_hw, hw_file)
 
 # generate linelist file
-#generate_linelist_file(label_file, save_file=linelist_file)
+generate_linelist_file(label_file, save_file=linelist_file)
 
 
 # To access a tsv file:
