@@ -53,5 +53,5 @@ TEST:
     GATHER_ON_CPU: True
     OUTPUT_FEATURE: True
 OUTPUT_DIR: "../output"
-DATA_DIR: "../flickr30k"
+DATA_DIR: "../ood_test"
 DISTRIBUTED_BACKEND: 'gloo'

@@ -15,11 +15,15 @@ from maskrcnn_benchmark.data.datasets.utils.image_ops import img_from_base64
 
 # To generate a tsv file:
 data_path = sys.argv[1]
+save_dir = sys.argv[2]
+#save_dir = '../flickr30k'
+
 img_list = os.listdir(data_path)
-tsv_file = "../flickr30k/test.tsv"
-label_file = "../flickr30k/test.label.tsv"
-hw_file = "../flickr30k/test.hw.tsv"
-linelist_file = "../flickr30k/test.linelist.tsv"
+
+tsv_file = save_dir + "/test.tsv"
+label_file = save_dir + "/test.label.tsv"
+hw_file = save_dir + "/test.hw.tsv"
+linelist_file = save_dir + "/test.linelist.tsv"
 
 rows = []
 rows_label = []
